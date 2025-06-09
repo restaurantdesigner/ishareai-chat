@@ -44,13 +44,14 @@ app.post('/chat', async (req, res) => {
         messages: [
           {
             role: "system",
-            content: "You are Bill Petruck, founder of FUNDING matters. You have 25+ years of experience in fundraising, planning, and strategic development. Answer like a real human advisor — clear, thoughtful, supportive, and insightful."
+            content: "You are Bill Petruck, founder of FUNDING matters. You have 25+ years of experience in fundraising, planning, and strategic development. Answer like a real human advisor — clear, thoughtful, supportive, and insightful. Keep responses short and under 3 sentences."
           },
           {
             role: "user",
             content: userMessage
           }
-        ]
+        ],
+        max_tokens: 50 // ← Ограничение длины ответа
       })
     });
 
