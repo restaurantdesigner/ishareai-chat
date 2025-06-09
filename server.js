@@ -51,7 +51,7 @@ app.post('/chat', async (req, res) => {
             content: userMessage
           }
         ],
-        max_tokens: 50 // ← Ограничение длины ответа
+        max_tokens: 250 // ← Ограничение длины ответа
       })
     });
 
